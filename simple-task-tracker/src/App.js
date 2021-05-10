@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import About from "./components/About";
 import AddTaskForm from "./components/AddTaskForm";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 
@@ -86,19 +89,31 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header
-        title="Task Tracker"
-        onToggleAddFormShown={toggleAddFormShown}
-        addFormShown={addFormShown}
-      />
-      {addFormShown && <AddTaskForm onAdd={addTask} />}
-      <TaskList
-        tasks={tasks}
-        onDoubleClick={toggleReminder}
-        onDelete={deleteTask}
-      />
-    </div>
+    <Router>
+      <div className="container">
+        <Header
+          title="Task Tracker"
+          onToggleAddFormShown={toggleAddFormShown}
+          addFormShown={addFormShown}
+        />
+        <Route
+          path="/"
+          exact
+          render={(props) => (
+            <>
+              {addFormShown && <AddTaskForm onAdd={addTask} />}
+              <TaskList
+                tasks={tasks}
+                onDoubleClick={toggleReminder}
+                onDelete={deleteTask}
+              />
+            </>
+          )}
+        ></Route>
+        <Route path="/about" component={About} />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
