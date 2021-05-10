@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "name": "Pickup groceries",
+      "date": "Thursday 24th May 18:00",
+      "hasReminder": false
+    },
+    {
+      "id": 3,
+      "name": "Dentist",
+      "date": "Friday 25th May 10:00",
+      "hasReminder": true
+    },
+    {
+      "id": 4,
+      "name": "Meeting with Jeff",
+      "date": "Friday 25th May 12:00",
+      "hasReminder": false
+    },
+    {
+      "id": 5,
+      "name": "Trip with Stan and Carol",
+      "date": "Saturday 26th May 14:00",
+      "hasReminder": true
+    }
+  ]
+}
