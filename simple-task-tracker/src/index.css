@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+/* Utility classes  */
+.button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: medium;
+  cursor: pointer;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  font-weight: 400;
+  height: auto;
+  vertical-align: middle;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Component classes  */
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 500px;
+  border: 2px solid gray;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__add-task-btn {
+  background-color: green;
+}
+
+.task {
+  background: rgb(233, 233, 233);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.task--reminder {
+  border-left: 5px solid green;
+  padding-left: 5px;
+}
+
+.task__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.task__delete {
+  color: red;
+  cursor: pointer;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.form {
+  row-gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form__col-control {
+  row-gap: 6px;
+}
+
+.form__col-control label {
+  font-weight: 400;
+}
+
+.form__col-control input {
+  padding: 5px;
+}
+
+.form__checkbox-control {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__checkbox-control label {
+  flex: 1;
+}
+
+.form__checkbox-control input {
+  flex: 2;
+  height: 15px;
+}
+
+.form__save-task-btn {
+  background-color: black;
+}
