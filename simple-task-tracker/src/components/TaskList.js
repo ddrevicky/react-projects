@@ -4,8 +4,13 @@ const TaskList = ({ tasks, onDoubleClick, onDelete }) => {
   return (
     <div className="task-list">
       {tasks.length ? (
-        tasks.map((task) => (
-          <Task task={task} onDoubleClick={onDoubleClick} onDelete={onDelete} />
+        tasks.map((task, idx) => (
+          <Task
+            key={idx}
+            task={task}
+            onDoubleClick={onDoubleClick}
+            onDelete={onDelete}
+          />
         ))
       ) : (
         <p>No tasks to show</p>

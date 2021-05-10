@@ -55,6 +55,7 @@ body {
 
 .header__add-task-btn {
   background-color: green;
+  min-width: 15%;
 }
 
 .task {
@@ -109,6 +110,7 @@ body {
 
 .form__checkbox-control label {
   flex: 1;
+  font-weight: 400;
 }
 
 .form__checkbox-control input {
